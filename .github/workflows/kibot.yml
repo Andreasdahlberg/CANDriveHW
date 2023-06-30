@@ -1,0 +1,64 @@
+name: "KiCad CI/CD for CANDrive"
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+on:
+  push:
+    paths:
+      - 'pcb/*.kicad_sch'
+      - 'pcb/*.kicad_pcb'
+      - 'pcb/*.kicad_pro'
+      - '**/*kibot.yml'
+  pull_request:
+    paths:
+      - 'pcb/*.kicad_sch'
+      - 'pcb/*.kicad_pcb'
+      - 'pcb/*.kicad_pro'
+      - '**/*kibot.yml'
+  repository_dispatch:
+    types: [run_qs]
+
+env:
+  schema: "pcb/candrive.kicad_sch"
+  board: "pcb/candrive.kicad_pcb"
+  dir: .
+
+jobs:
+# checks
+  ERC:
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad6_auto_full:latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: run kibot
+        run: |
+          kibot -c pcb/candrive.kibot.yaml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_drc -v -i
+  DRC:
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad6_auto_full:latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: run kibot
+        run: |
+          kibot -c pcb/candrive.kibot.yaml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc -v -i
+
+# images
+  render:
+    runs-on: ubuntu-latest
+    #needs: [DRC]  TODO: Enable this!
+    container: ghcr.io/inti-cmnb/kicad6_auto_full:latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: run kibot
+        run: |
+          kibot -c pcb/candrive.kibot.yaml -e ${{env.schema}} -b ${{env.board}} -d ${{env.dir}} -s run_erc,run_drc -v \
+            basic_pcbdraw_png_jlcpcb_green_enig_top basic_pcbdraw_png_jlcpcb_green_enig_bottom
+      - uses: actions/upload-artifact@v3.1.1
+        if: ${{success()}}
+        with:
+          name: ${{github.event.repository.name}}_img
+          if-no-files-found: error
+          path: |
+            ${{env.dir}}/PCB/2D_render/jlcpcb_green_enig/**
+            !${{env.dir}}/**/*.ogv
+            !${{env.dir}}/**/*.log
