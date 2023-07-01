@@ -76,7 +76,7 @@ jobs:
       - uses: actions/upload-artifact@v3.1.1
         if: ${{success()}}
         with:
-          name: ${{github.event.repository.name}}_bom
+          name: ${{github.event.repository.name}}_docs
           if-no-files-found: error
           path: |
             ${{env.dir}}/docs/**
