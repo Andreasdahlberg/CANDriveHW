@@ -1,0 +1,7 @@
+outputs:
+  - name: 'schematic_pdf'
+    comment: 'Generate schematic (PDF)'
+    type: 'pdf_sch_print'
+    dir: 'docs/schematic'
+    options:
+      output: '%f-%i.%x'
