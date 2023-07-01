@@ -60,6 +60,8 @@ jobs:
           if-no-files-found: error
           path: |
             ${{env.dir}}/img/**
+            !${{env.dir}}/**/*.ogv
+            !${{env.dir}}/**/*.log
 
   docs:
     runs-on: ubuntu-latest
@@ -78,3 +80,5 @@ jobs:
           if-no-files-found: error
           path: |
             ${{env.dir}}/docs/**
+            !${{env.dir}}/**/*.ogv
+            !${{env.dir}}/**/*.log
