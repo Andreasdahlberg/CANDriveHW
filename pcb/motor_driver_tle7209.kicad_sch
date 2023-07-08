@@ -169,16 +169,13 @@
       (property "Footprint" "PG-DSO-20-65_11X15P9_INF" (id 2) (at -6.35 6.35 0)
         (effects (font (size 1.27 1.27) italic) hide)
       )
-      (property "Datasheet" "TLE72093RAUMA1" (id 3) (at -5.08 3.81 0)
+      (property "Datasheet" "https://www.infineon.com/dgdl/TLE7209-3R_DS_10.pdf?fileId=5546d4614815da8801485e7bc73d17ed" (id 3) (at -5.08 3.81 0)
         (effects (font (size 1.27 1.27) italic) hide)
       )
-      (property "ki_locked" "" (id 4) (at 0 0 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "ki_keywords" "TLE72093RAUMA1" (id 5) (at 0 0 0)
+      (property "ki_keywords" "TLE72093RAUMA1" (id 4) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_fp_filters" "PG-DSO-20-65_11X15P9_INF PG-DSO-20-65_11X15P9_INF-M PG-DSO-20-65_11X15P9_INF-L" (id 6) (at 0 0 0)
+      (property "ki_fp_filters" "PG-DSO-20-65_11X15P9_INF PG-DSO-20-65_11X15P9_INF-M PG-DSO-20-65_11X15P9_INF-L" (id 5) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (symbol "TLE72093RAUMA1_0_1"
@@ -747,7 +744,7 @@
     (uuid d35675bd-34fc-4071-a786-583eaa3b55e1)
     (property "Reference" "JP7" (id 0) (at 224.79 43.18 0))
     (property "Value" "SolderJumper_3_Bridged12" (id 1) (at 226.06 45.72 0))
-    (property "Footprint" "" (id 2) (at 224.79 48.26 0)
+    (property "Footprint" "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm" (id 2) (at 224.79 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 224.79 48.26 0)
@@ -786,7 +783,7 @@
     (property "Footprint" "PG-DSO-20-65_11X15P9_INF" (id 2) (at 152.4 73.66 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
-    (property "Datasheet" "TLE72093RAUMA1" (id 3) (at 152.4 73.66 0)
+    (property "Datasheet" "https://www.infineon.com/dgdl/TLE7209-3R_DS_10.pdf?fileId=5546d4614815da8801485e7bc73d17ed" (id 3) (at 152.4 73.66 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (pin "1" (uuid 1ff71c46-fae1-4a20-bf13-6f05d9caa842))
@@ -855,35 +852,35 @@
     (path "/90b4643e-192e-449e-b66f-efc2139781d1"
       (reference "#PWR044") (unit 1) (value "VCC") (footprint "")
     )
-    (path "/7b2620ec-d0d0-4871-bef0-e5ff0aba0d11"
-      (reference "#PWR049") (unit 1) (value "VCC") (footprint "")
+    (path "/6f1b7afb-b303-4ad2-bcf9-fecd961d8db6"
+      (reference "#PWR060") (unit 1) (value "VCC") (footprint "")
     )
-    (path "/bea69858-676a-4380-a271-18b8ddc7a239"
-      (reference "#PWR050") (unit 1) (value "GND") (footprint "")
+    (path "/e494a41b-e7e8-4ceb-8d42-5be6b46b454d"
+      (reference "#PWR061") (unit 1) (value "GND") (footprint "")
     )
-    (path "/d5b7cd95-58cd-4b71-aa8a-7b7641522337"
-      (reference "#PWR0101") (unit 1) (value "VCC") (footprint "")
+    (path "/94c10a4e-13a0-47a0-9a30-4953e06cc3f5"
+      (reference "#PWR062") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/34562c8e-aaad-421d-a5f1-ba9e1144340f"
+      (reference "#PWR063") (unit 1) (value "VCC") (footprint "")
+    )
+    (path "/e99755ab-40f9-48e9-a5b8-c468ef3921c5"
+      (reference "#PWR064") (unit 1) (value "GND") (footprint "")
     )
     (path "/463ab55b-2711-4cbc-94aa-8fb5193bcce8"
       (reference "#PWR0102") (unit 1) (value "VCC") (footprint "")
     )
-    (path "/83e79180-30f8-4eba-b9ce-15a2118618d2"
-      (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/ad3bbd64-3886-4a54-8f2c-17b5cfa8d45e"
-      (reference "#PWR0104") (unit 1) (value "GND") (footprint "")
-    )
     (path "/248bbb4a-c93d-47d6-b963-fb19dd9d7b6a"
       (reference "#PWR0105") (unit 1) (value "GND") (footprint "")
     )
-    (path "/0ac8eb1f-9032-4202-9c66-6fa62be898ae"
-      (reference "C1") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+    (path "/0696aa36-e970-469a-9557-eada2d1e94d6"
+      (reference "C20") (unit 1) (value "100n") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
-    (path "/c09145ac-f8cf-4a8d-93b2-e0a1204f53d8"
-      (reference "C18") (unit 1) (value "1u") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
+    (path "/512b2013-dfa9-490e-bf36-cc9e22c11b5b"
+      (reference "C21") (unit 1) (value "1u") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
-    (path "/0598e5f5-5640-441e-9bd6-d58f8f29770b"
-      (reference "JP1") (unit 1) (value "SolderJumper_3_Bridged12") (footprint "")
+    (path "/d35675bd-34fc-4071-a786-583eaa3b55e1"
+      (reference "JP7") (unit 1) (value "SolderJumper_3_Bridged12") (footprint "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm")
     )
     (path "/d6105da6-14d7-4abc-9138-b37b0fb3ed1f"
       (reference "U1") (unit 1) (value "TLE72093RAUMA1") (footprint "PG-DSO-20-65_11X15P9_INF")

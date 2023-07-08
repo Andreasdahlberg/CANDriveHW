@@ -4773,7 +4773,7 @@
     (property "Value" "SolderJumper_3_Open" (id 1) (at 353.06 63.5 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "" (id 2) (at 353.06 67.31 0)
+    (property "Footprint" "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm" (id 2) (at 353.06 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 353.06 67.31 0)
@@ -5868,13 +5868,13 @@
       (reference "JP3") (unit 1) (value "SolderJumper_2_Bridged") (footprint "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm")
     )
     (path "/9004a9a0-5a74-478c-a0b9-f7a74eb92eb6"
-      (reference "JP5") (unit 1) (value "SolderJumper_3_Open") (footprint "")
+      (reference "JP5") (unit 1) (value "SolderJumper_3_Open") (footprint "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm")
     )
     (path "/0faae124-e803-4260-a5b6-c24fa6f1d91e/d35675bd-34fc-4071-a786-583eaa3b55e1"
-      (reference "JP6") (unit 1) (value "SolderJumper_3_Bridged12") (footprint "")
+      (reference "JP6") (unit 1) (value "SolderJumper_3_Bridged12") (footprint "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm")
     )
     (path "/97b9cf33-6b7f-4257-9ecd-e147ca8f6509/d35675bd-34fc-4071-a786-583eaa3b55e1"
-      (reference "JP7") (unit 1) (value "SolderJumper_3_Bridged12") (footprint "")
+      (reference "JP7") (unit 1) (value "SolderJumper_3_Bridged12") (footprint "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm")
     )
     (path "/625fea47-5bab-4405-abf6-a7f68cc6d801"
       (reference "L1") (unit 1) (value "L") (footprint "Inductor_SMD:L_0805_2012Metric_Pad1.05x1.20mm_HandSolder")
